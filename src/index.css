@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { font-feature-settings: 'tnum'; color-scheme: dark; }
+  body {
+    @apply bg-canvas text-ink-body font-sans antialiased selection:bg-brand/30 selection:text-white;
+    background-image: linear-gradient(to bottom, transparent 50%, rgba(239, 68, 68, 0.03) 51%);
+    background-size: 100% 4px;
+  }
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: #0a0b0e; }
+  ::-webkit-scrollbar-thumb { background: #222634; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #ef4444; }
+}
+.grid-bg {
+  background-image: radial-gradient(rgba(239, 68, 68, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.material-symbols-outlined { font-size: 18px; line-height: 1; vertical-align: middle; }
